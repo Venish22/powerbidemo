@@ -33,5 +33,5 @@ jobs:
       run: |
         curl -X PUT -H "Authorization: Bearer ${{ env.TOKEN }}" \
           -H "Content-Type: application/octet-stream" \
-          --data-binary @path/to/your/report.pbix \
+          --data-binary ./Sample data.pbix \
           "https://api.powerbi.com/v1.0/myorg/groups/${{ secrets.WORKSPACE_ID }}/reports/${{ secrets.REPORT_NAME }}/Import"
